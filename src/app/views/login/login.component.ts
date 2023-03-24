@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RequestLoginModel } from 'src/app/resources/models/requestLoginModel';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +8,29 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+ requestLogin! : RequestLoginModel;
+
 
   loading = false;
 
-  load() {
+  constructor(){
+
+  }
+
+  ngOnInit(): void {
+    this.requestLogin = new RequestLoginModel();
+  }
+
+
+  Logar() {
       this.loading = true;
-      setTimeout(() => this.loading = false, 1000);
+
+      setTimeout(() => {
+        this.loading = false;
+        console.log(this.requestLogin);
+      }, 5000);
+
+
   }
 
 

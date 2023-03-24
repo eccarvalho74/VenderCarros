@@ -9,6 +9,7 @@ import {PasswordModule} from 'primeng/password';
 import { LoginComponent } from './views/login/login.component';
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {CardModule} from 'primeng/card';
     LoginComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
