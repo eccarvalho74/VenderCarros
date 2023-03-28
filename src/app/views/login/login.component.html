@@ -1,30 +1,30 @@
 
-<div class="card">
-    <div class="flex flex-wrap align-items-center justify-content-center card-container blue-container">
-      <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6 ">
-        <div class="text-center mb-5">
-           <i class="pi pi-car" style="font-size: 2rem"></i>
-            <div class="text-900 text-3xl font-medium mb-3">Carros</div>
-            <span class="text-600 font-medium line-height-3">Não vendemos carros! Realizamos sonhos</span>
-            <br/>
-            <a class="font-medium no-underline ml-2 text-blue-500 cursor-pointer">Cadastre-se hoje!</a>
-        </div>
+<div class="card ">
 
-        <div>
-            <label for="email1" class="block text-900 font-medium mb-2">Email</label>
-            <input [(ngModel)]="requestLogin.login"  id="login" type="text" placeholder="User Name" pInputText class="w-full mb-3" >
+  <div class="flex flex-wrap align-items-center justify-content-center card-container blue-container ">
 
-            <label for="password1" class="block text-900 font-medium mb-2">Password</label>
-            <input [(ngModel)]="requestLogin.password" id="password1" type="password" placeholder="Password" pInputText class="w-full mb-3">
 
-            <div class="flex align-items-center justify-content-center mb-6">
-                <a class="font-medium no-underline ml-2 text-blue-500 text-center cursor-pointer">Esquici minha senha</a>
+      <p-card header="Carros" subheader="Não vendemos carros! Realizamos sonhos" [style]="{ width: '360px' }">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="../../../assets/background-familia.jpg" />
+        </ng-template>
+            <div>
+                <label for="email1" class="block text-900 font-medium mb-2">Email</label>
+                <input [(ngModel)]="requestLogin.login"  id="login" type="text" placeholder="User Name" pInputText class="w-full mb-3" >
+
+                <label for="password1" class="block text-900 font-medium mb-2">Password</label>
+                <input [(ngModel)]="requestLogin.password" id="password1" type="password" placeholder="Password" pInputText class="w-full mb-3">
+
+                <div class="flex align-items-center justify-content-center mb-6">
+                    <p-button styleClass="p-button-info p-button-text" class="font-small no-underline ml-1 text-blue-500 text-center cursor-pointer">Esquici minha senha</p-button>
+
+             </div>
+                <button pButton pRipple label="Sign In" icon="pi pi-user" class="w-full"></button>
+                <p-divider type="solid" class="w-full"></p-divider>
+
+                  <p-button  label="Cadastre-se hoje!" icon="pi pi-user" styleClass="p-button-info p-button-text" class="w-full text-center"></p-button>
+
             </div>
-
-            <button pButton pRipple label="Sign In" icon="pi pi-user" class="w-full" (click)="Logar()" [loading]="loading"></button>
-
-
-        </div>
-      </div>
+      </p-card>
     </div>
 </div>

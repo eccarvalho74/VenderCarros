@@ -1,13 +1,14 @@
 $background-color: #252525 !important;
 $font-color: #fff !important;
 
-body {
+.bgLogin {
   background-image: url("./assets/background-familia.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   opacity: 0.95;
 }
+
 
 .ui-card {
   background-color: $background-color;

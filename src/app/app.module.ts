@@ -11,6 +11,7 @@ import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DividerModule } from 'primeng/divider';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     InputTextModule,
     ButtonModule,
     CardModule,
-    
+    DividerModule
+
 
   ],
   providers: [],

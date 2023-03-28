@@ -1,30 +1,19 @@
-import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivateFn, RouterStateSnapshot } from '@angular/router';
+import { inject, Injectable } from '@angular/core';
+import { CanActivateFn, ActivatedRouteSnapshot, RouterStateSnapshot, Router, CanActivateChildFn } from '@angular/router';
+import { map, catchError, of } from 'rxjs';
 import { AuthService } from './auth.service';
 
 
-@Injectable({
-  providedIn: 'root'
-})
-export class AuthGuardService {
 
-  constructor(private auth: AuthService) { }
-
-
-
-   public CanActivate(): boolean{
-     return this.auth.isAuthenticated();
-   }
-
-
-
-
-}
-
-/*
-export const yourGuard: CanActivateFn = (
-  next: ActivatedRouteSnapshot,
+export const canActivate: CanActivateFn = (
+  route: ActivatedRouteSnapshot,
   state: RouterStateSnapshot) => {
-    return this.auth.isAuthenticated();
-}
-*/
+  const authService = inject(AuthService);
+ // const router = inject(Router);
+
+  return authService.isAuthenticated()
+};
+
+export const canActivateChild: CanActivateChildFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => canActivate(route, state);
+
+//Código: https://angular.io/api/router/CanActivateFn

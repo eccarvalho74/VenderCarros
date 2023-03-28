@@ -54,7 +54,8 @@ export class LoginComponent {
         console.log(this.requestLogin);
       }, 5000);
 
-  */
+*/
+this.loading = false;
   }
 
 
