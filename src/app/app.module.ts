@@ -10,6 +10,7 @@ import { LoginComponent } from './views/login/login.component';
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     FormsModule,
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -26,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     InputTextModule,
     ButtonModule,
     CardModule,
+    
 
   ],
   providers: [],
